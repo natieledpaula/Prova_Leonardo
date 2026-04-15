@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             String preco = editTextPreco.getText().toString().trim();
             String quantidade = editTextQuantidade.getText().toString().trim();
 
-        if (nome.isEmpty() || codigo.isEmpty() | precoStr.isEmpty() || quantidade.isEmpty()){
+        if (nome.isEmpty() || codigo.isEmpty() | preco.isEmpty() || quantidade.isEmpty()){
             Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        double preco = Double.parseDouble(precoStr);
+        double preco = Double.parseDouble(preco);
         if (preco <= 0) {
             Toast.makeText(this, "Preço deve ser positivo!", Toast.LENGTH_SHORT).show();
             return;
@@ -61,13 +61,13 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        Produto product = new Produto();
-        product.nome = nome;
-        product.codigo = codigo;
-        product.preco = preco;
-        product.quantidade = quantidade;
+        Produto produto = new Produto();
+        produto.nome = nome;
+        produto.codigo = codigo;
+        produto.preco = preco;
+        produto.quantidade = quantidade;
 
-        produtoDao.inserir(product);
+        produtoDao.inserir(produto);
 
         Log.d("MainActivity", "Produto salvo com sucesso");
 
