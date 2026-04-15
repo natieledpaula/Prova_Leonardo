@@ -75,28 +75,6 @@ O aplicativo utiliza o **Room Database** para armazenamento local.
 
 ---
 
-## 🏗️ Estrutura do Projeto
-
-```
-📁 app
- ┣ 📁 model
- ┃ ┗ Product.java
- ┣ 📁 dao
- ┃ ┗ ProductDao.java
- ┣ 📁 database
- ┃ ┗ ProductDatabase.java
- ┣ 📁 ui
- ┃ ┣ MainActivity.java
- ┃ ┣ AddProductActivity.java
- ┃ ┗ ProductAdapter.java
- ┗ 📁 res/layout
-   ┣ activity_main.xml
-   ┣ activity_add_product.xml
-   ┗ item_product.xml
-```
-
----
-
 ## 💡 Observações
 
 * As operações de banco de dados são executadas em **threads separadas**, evitando travamentos na interface.
