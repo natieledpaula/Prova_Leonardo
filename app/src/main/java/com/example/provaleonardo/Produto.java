@@ -10,5 +10,5 @@ public class Produto {
     public String nome;
     public String codigo;
     public double preco;
-    public int quantidade;
+    public int quantidade
 }
